@@ -41,14 +41,10 @@ function List() {
     <div>
       {stories.map((story) => (
         <div key={story.objectID}>
-          <h3>
-            <a href={story.url} target="_blank" rel="noopener noreferrer">
-              {story.title}
-            </a>
-          </h3>
-          <p>Author: {story.author}</p>
-          <p>Points: {story.points}</p>
-          <p>Comments: {story.num_comments}</p>
+          <span>{story.title}</span>
+          <span> - {story.author}</span>
+          <span> | {story.points} points</span>
+          <span> | {story.num_comments} comments</span>
         </div>
       ))}
     </div>
